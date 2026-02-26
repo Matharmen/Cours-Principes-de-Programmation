@@ -1,0 +1,70 @@
+<?php
+
+//Premier test
+/*$url="http://localhost:5000/students";
+$response=file_get_contents($url);
+
+echo "<pre>";
+echo $response;
+echo "</pre>";*/
+//students vient du programme Cours_APIREST, il faut le faire tourner avant.
+
+//Second test
+/*$url="http://localhost:5000/students";
+$reponse=file_get_contents($url);
+//Décodage du JSON en tableau PHP
+$students=json_decode($reponse,true);
+
+echo "<pre>";
+print_r($students);
+echo "</pre>";*/
+
+//Troisième test
+/*$url="http://localhost:5000/students";
+$reponse=file_get_contents($url);
+$students=json_decode($reponse,true);
+
+echo "<h1>Liste des étudiants</h1>";
+
+foreach($students as $student){
+    echo $student['name'] . " - " . $student['age'];
+}*/
+
+//Quatrième Test
+/*require_once 'config/config.php';
+
+$url = API_BASE_URL . 'students';
+$reponse=file_get_contents($url);
+
+$students=json_decode($reponse,true);
+
+echo "<h1>Liste des étudiants</h1>";
+
+foreach($students as $student){
+    echo $student['name'] . " - " . $student['age'] . " ans<br>";
+}*/
+
+//Cinquième Test
+/*require_once 'config/config.php';
+require_once 'services/StudentService.php';
+
+//Appel du service
+$students = StudentService::getAllStudents();
+
+echo "<h1>Liste des étudiants</h1>";
+
+foreach($students as $student){
+    echo $student['name'] . " - " . $student['age'] . " ans<br>";
+}*/
+
+//Dans modele mvc (modele vue controleur), c'est un design pattern, 
+
+require_once 'config/config.php';
+require_once 'services/StudentService.php';
+
+//Récupération des données
+$students = StudentService::getAllStudents();
+
+//affichage
+//require_once 'views/students.php';
+require_once 'views/students2.php';
