@@ -6,5 +6,4 @@ require_once 'services/StudentService.php';
 $students = StudentService::getAllStudents();
 
 //affichage
-//require_once 'views/students.php';
-require_once 'views/students2.php';
+require_once 'views/students.php';
